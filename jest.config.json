@@ -1,0 +1,4 @@
+{
+  "setupFiles": [],
+  "testMatch": [ "**/*.test.[tj]s?(x)" ]
+}
