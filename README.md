@@ -42,6 +42,6 @@ To start that Docker image `docker run --rm -it -p 127.0.0.1:9090:80 react-start
 - [x] Add ESLint
 - [x] Add Dockerfile
 - [ ] Add font-types imports
-- [ ] Add images imports
-- [ ] Add SVG imports
+- [x] Add images imports
+- [x] Add SVG imports
 - [ ] Dependencies cleanup
