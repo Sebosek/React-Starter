@@ -56,10 +56,10 @@ To build the Docker file use
 To start that Docker image `docker run --rm -it -p 127.0.0.1:9090:80 react-startup:alpha`.
 
 ## Todo
-
 - [x] Add ESLint
 - [x] Add Dockerfile
-- [ ] Add font-types imports
 - [x] Add images imports
 - [x] Add SVG imports
+- [ ] Add Azure CI pipeline including Unit tests and Cypress
 - [ ] Dependencies cleanup
+- [ ] Add font-types imports
