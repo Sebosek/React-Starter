@@ -30,7 +30,25 @@ Opens Cypress integration testing tool.
 ### `yarn lint`
 Runs TypeScript compiler without any output to check type correctness and then runs ESLint.
 
-## Docker
+## SVG support
+SVG files are supported in a stupidly easy way to use, thanks to `file-loader` and `@svgr/webpack`. 
+
+If you want to use an SVG inside the image tag, just import the SVG file and put it into the `<img />` tag, as it's shown in the code snippet.
+```tsx
+import reactLogo from './logo.svg';
+
+const Image = <img src={reactLogo} alt="React logo" />
+```
+
+But sometimes you want to use the SVG file as the React component and this is exactly the time when `@svgr/webpack` comes to the party and shines. Just import the SVG file as liked it would be a named export.
+
+```tsx
+import { ReactComponent as ReactLogo } from './logo.svg';
+
+const WithImage = <><ReactLogo /></>
+```
+
+## Docker support
 Startup comes with Docker support. The application is served by Caddy server, the configuration for Caddy server is in the Caddyfile.
 To build the Docker file use
 `docker build . --tag react-startup:alpha`.

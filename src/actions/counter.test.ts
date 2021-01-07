@@ -7,7 +7,7 @@ test('Should generate init action object', () => {
   expect(action).toEqual({ type: CounterActionType.Init });
 });
 
-test('Should generate increment action object withou argument', () => {
+test('Should generate increment action object without argument', () => {
   const action = increment();
 
   expect(action).toEqual({ type: CounterActionType.Increment, amount: 1 });
@@ -20,7 +20,7 @@ test('Should generate increment action object with argument', () => {
   expect(action).toEqual({ type: CounterActionType.Increment, amount });
 });
 
-test('Should generate decrement action object withou argument', () => {
+test('Should generate decrement action object without argument', () => {
   const action = decrement();
 
   expect(action).toEqual({ type: CounterActionType.Decrement, amount: 1 });
