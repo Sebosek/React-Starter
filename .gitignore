@@ -2,6 +2,9 @@
 node_modules
 /public
 
+# coverage result
+/.coverage
+
 # local env files
 /.env
 

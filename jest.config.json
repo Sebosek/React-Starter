@@ -1,4 +1,6 @@
 {
   "setupFiles": [],
-  "testMatch": [ "**/*.test.[tj]s?(x)" ]
+  "testMatch": [ "**/*.test.[tj]s?(x)" ],
+  "coverageReporters": ["json", "lcov", "text", "clover", "cobertura"],
+  "coverageDirectory": ".coverage"
 }

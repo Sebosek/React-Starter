@@ -10,6 +10,7 @@
     "serve": "webpack serve",
     "start": "serve -l 8080 ./public",
     "test": "jest",
+    "coverage": "jest --coverage --coverageReporters=cobertura",
     "cypress": "cypress open",
     "lint": "tsc --noEmit && eslint src/**/*.{ts,tsx,js,jsx} --fix"
   },
