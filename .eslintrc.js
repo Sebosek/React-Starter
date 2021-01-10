@@ -52,6 +52,17 @@
       ImportDeclaration: { multiline: true, minProperties: 5 },
       ExportDeclaration: { multiline: true, minProperties: 2 },
     }],
+
+    /** Enable devDependencies for tests */
+    'import/no-extraneous-dependencies': ['error', {
+      // I want check dev dependencies for components, service, redux, but...
+      devDependencies: [
+        // Don't run check import of devDependencies for the followings
+        '**/*.test.{ts,tsx}',
+        '**/*.spec.ts',
+        '**/etc/tests/**/*.{ts,tsx}',
+      ],
+    }],
   },
   overrides: [
     {
@@ -60,6 +71,12 @@
         'jest/no-export': 'off',
         'jest/expect-expect': 'off',
       },
+    },
+    {
+      files: ["**/*.tsx"],
+      rules: {
+        "react/prop-types": "off"
+      }
     },
   ],
 };

@@ -1,9 +1,9 @@
 {
   "baseUrl": "http://localhost:8080",
-  "fixturesFolder": "src/cypress/fixtures",
+  "fixturesFolder": "src/etc/cypress/fixtures",
   "integrationFolder": "src/",
-  "pluginsFile": "src/cypress/plugins.js",
-  "supportFile": "src/cypress/support.js",
+  "pluginsFile": "src/etc/cypress/plugins.js",
+  "supportFile": "src/etc/cypress/support.js",
   "testFiles": "**/*.spec.[tj]s",
   "video": false,
   "screenshotOnRunFailure": false
