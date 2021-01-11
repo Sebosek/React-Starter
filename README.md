@@ -2,6 +2,9 @@
 
 🔋 by **Webpack**, **TypeScript**, **Jest** and **Cypress**.
 
+[![Build Status](https://dev.azure.com/sebastianbusek/React%20starter/_apis/build/status/Sebosek.React-Starter?branchName=master)](https://dev.azure.com/sebastianbusek/React%20starter/_build/latest?definitionId=14&branchName=master)
+[![Quality Gate Status](https://sonarcloud.io/api/project_badges/measure?project=Sebosek_React-Starter&metric=alert_status)](https://sonarcloud.io/dashboard?id=Sebosek_React-Starter)
+
 The starter contains a single Counter component, how you're going to use React hierarchy it's up to you, however I'm going to use separations by pages.
 Each page is made by a dictionary containing components and redux. 
 
@@ -61,6 +64,6 @@ To start that Docker image `docker run --rm -it -p 127.0.0.1:9090:80 react-start
 - [x] Add images imports
 - [x] Add SVG imports
 - [ ] Add Azure CI pipeline including Unit tests and Cypress
-- [ ] Add SonarQube via SonarCloud
+- [x] Add SonarQube via SonarCloud
 - [ ] Dependencies cleanup
 - [ ] Add font-types imports
