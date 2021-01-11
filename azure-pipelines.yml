@@ -41,14 +41,14 @@ steps:
       yarn coverage
     displayName: 'Run test with coverage'
 
-  - script: |
-      npm run ci
-    displayName: 'Run Cypress tests'
-    env:
-      # avoid warnings about terminal
-      TERM: xterm
-
   - task: PublishCodeCoverageResults@1
     inputs:
       codeCoverageTool: 'Cobertura'
       summaryFileLocation: '$(System.DefaultWorkingDirectory)/.coverage/cobertura-coverage.xml'
+
+  - script: |
+      yarn run ci
+    displayName: 'Run Cypress tests'
+    env:
+      # avoid warnings about terminal
+      TERM: xterm
