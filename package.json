@@ -10,7 +10,7 @@
     "serve": "webpack serve",
     "start": "serve --no-clipboard --listen 8080 ./public",
     "test": "jest",
-    "test:e2e": "DEBUG=cypress:* cypress run --headless --config-file ./cypress.json",
+    "test:e2e": "cypress run --headless --config-file ./cypress.json",
     "coverage": "jest --coverage --coverageReporters=cobertura",
     "cypress": "cypress open",
     "lint": "tsc --noEmit && eslint src/**/*.{ts,tsx,js,jsx} --fix",

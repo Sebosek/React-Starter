@@ -47,6 +47,10 @@ steps:
       summaryFileLocation: '$(System.DefaultWorkingDirectory)/.coverage/cobertura-coverage.xml'
 
   - script: |
+      yarn build
+    displayName: 'Build production build'
+
+  - script: |
       yarn run ci
     displayName: 'Run Cypress tests'
     env:
