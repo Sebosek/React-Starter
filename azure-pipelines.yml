@@ -4,30 +4,51 @@
 # https://docs.microsoft.com/azure/devops/pipelines/languages/javascript
 
 trigger:
-- master
+  - master
 
 pool:
   vmImage: 'ubuntu-20.04'
 
 steps:
-- task: NodeTool@0
-  inputs:
-    versionSpec: '14.x'
-  displayName: 'Install Node.js'
+  - task: NodeTool@0
+    inputs:
+      versionSpec: '14.x'
+    displayName: 'Install Node.js'
 
-- script: |
-    yarn install
-  displayName: 'Install npm dependencies'
+  - task: Cache@2
+    inputs:
+      key: 'npm | $(Agent.OS) | yarn-lock.json'
+      path: '/home/vsts/.npm'
+      restoreKeys: 'npm | $(Agent.OS) | yarn.lock'
+    displayName: 'Cache NPM packages'
 
-- script: |
-    yarn lint
-  displayName: 'Lint code'
+  - task: Cache@2
+    inputs:
+      key: 'npm | $(Agent.OS) | yarn-lock.json'
+      path: '/home/vsts/.cache/Cypress'
+      restoreKeys: 'npm | $(Agent.OS) | yarn.lock'
+    displayName: 'Cache Cypress packages'
 
-- script: |
-    yarn coverage
-  displayName: 'Run test with coverage'
+  - script: |
+      yarn install
+    displayName: 'Install npm dependencies'
 
-- task: PublishCodeCoverageResults@1
-  inputs:
-    codeCoverageTool: 'Cobertura'
-    summaryFileLocation: '$(System.DefaultWorkingDirectory)/.coverage/cobertura-coverage.xml'
+  - script: |
+      yarn lint
+    displayName: 'Lint code'
+
+  - script: |
+      yarn coverage
+    displayName: 'Run test with coverage'
+
+  - script: |
+      npm run ci
+    displayName: 'Run Cypress tests'
+    env:
+      # avoid warnings about terminal
+      TERM: xterm
+
+  - task: PublishCodeCoverageResults@1
+    inputs:
+      codeCoverageTool: 'Cobertura'
+      summaryFileLocation: '$(System.DefaultWorkingDirectory)/.coverage/cobertura-coverage.xml'
