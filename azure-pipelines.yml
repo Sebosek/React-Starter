@@ -17,14 +17,14 @@ steps:
 
   - task: Cache@2
     inputs:
-      key: 'npm | $(Agent.OS) | yarn-lock.json'
+      key: 'npm | $(Agent.OS) | yarn.lock'
       path: '/home/vsts/.npm'
       restoreKeys: 'npm | $(Agent.OS) | yarn.lock'
     displayName: 'Cache NPM packages'
 
   - task: Cache@2
     inputs:
-      key: 'npm | $(Agent.OS) | yarn-lock.json'
+      key: 'npm | $(Agent.OS) | yarn.lock'
       path: '/home/vsts/.cache/Cypress'
       restoreKeys: 'npm | $(Agent.OS) | yarn.lock'
     displayName: 'Cache Cypress packages'
