@@ -61,6 +61,7 @@
         '**/*.test.{ts,tsx}',
         '**/*.spec.ts',
         '**/etc/tests/**/*.{ts,tsx}',
+        '**/etc/cypress/**/*.js',
       ],
     }],
   },

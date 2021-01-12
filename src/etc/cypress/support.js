@@ -1,4 +1,4 @@
-import '@cypress/code-coverage/support'
+import '@cypress/code-coverage/support';
 
 // ***********************************************************
 // This example support.js is processed and
