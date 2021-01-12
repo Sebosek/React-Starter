@@ -46,6 +46,7 @@
     "webpack-cli": "^4.2.0"
   },
   "devDependencies": {
+    "@cypress/code-coverage": "^3.9.2",
     "@jest/globals": "^26.6.2",
     "@svgr/webpack": "^5.5.0",
     "@testing-library/dom": "^7.29.2",
@@ -62,6 +63,7 @@
     "@types/testing-library__react": "^10.2.0",
     "@typescript-eslint/eslint-plugin": "^4.11.0",
     "@typescript-eslint/parser": "^4.11.0",
+    "babel-plugin-istanbul": "^6.0.0",
     "css-loader": "^5.0.1",
     "cypress": "^6.1.0",
     "eslint": "^7.16.0",

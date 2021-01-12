@@ -42,6 +42,7 @@ steps:
     displayName: 'Run test with coverage'
 
   - task: PublishCodeCoverageResults@1
+    displayName: 'Process unit test code coverage'
     inputs:
       codeCoverageTool: 'Cobertura'
       summaryFileLocation: '$(System.DefaultWorkingDirectory)/.coverage/cobertura-coverage.xml'
@@ -56,3 +57,14 @@ steps:
     env:
       # avoid warnings about terminal
       TERM: xterm
+  
+  - script: |
+      npx nyc report --report-dir=".coverage/cypress" --reporter=cobertura
+    displayName: 'Report Cypress code coverage'
+
+  - task: PublishCodeCoverageResults@1
+    displayName: 'Process Cypress test code coverage'
+    inputs:
+      codeCoverageTool: 'Cobertura'
+      summaryFileLocation: '$(System.DefaultWorkingDirectory)/.coverage/cypress/cobertura-coverage.xml'
+  

@@ -63,7 +63,7 @@ To start that Docker image `docker run --rm -it -p 127.0.0.1:9090:80 react-start
 - [x] Add Dockerfile
 - [x] Add images imports
 - [x] Add SVG imports
-- [ ] Add Azure CI pipeline including Unit tests and Cypress
+- [x] Add Azure CI pipeline including Unit tests and Cypress
 - [x] Add SonarQube via SonarCloud
 - [ ] Dependencies cleanup
 - [ ] Add font-types imports
