@@ -11,7 +11,7 @@
     "start": "serve --no-clipboard --listen 8080 ./public",
     "test": "jest",
     "test:e2e": "cypress run --headless --config-file ./cypress.json",
-    "coverage": "jest --coverage --coverageReporters=cobertura",
+    "coverage": "jest --coverage  --coverageReporters=lcov --coverageReporters=cobertura",
     "cypress": "cypress open",
     "lint": "tsc --noEmit && eslint src/**/*.{ts,tsx,js,jsx} --fix",
     "ci": "run-p --race start test:e2e"
@@ -63,7 +63,6 @@
     "@types/testing-library__react": "^10.2.0",
     "@typescript-eslint/eslint-plugin": "^4.11.0",
     "@typescript-eslint/parser": "^4.11.0",
-    "babel-plugin-istanbul": "^6.0.0",
     "css-loader": "^5.0.1",
     "cypress": "^6.1.0",
     "eslint": "^7.16.0",
