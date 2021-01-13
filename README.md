@@ -4,6 +4,7 @@
 
 [![Build Status](https://dev.azure.com/sebastianbusek/React%20starter/_apis/build/status/Sebosek.React-Starter?branchName=master)](https://dev.azure.com/sebastianbusek/React%20starter/_build/latest?definitionId=14&branchName=master)
 [![Quality Gate Status](https://sonarcloud.io/api/project_badges/measure?project=Sebosek_React-Starter&metric=alert_status)](https://sonarcloud.io/dashboard?id=Sebosek_React-Starter)
+[![DeepScan grade](https://deepscan.io/api/teams/12473/projects/15507/branches/310799/badge/grade.svg)](https://deepscan.io/dashboard#view=project&tid=12473&pid=15507&bid=310799)
 
 The starter contains a single Counter component, how you're going to use React hierarchy it's up to you, however I'm going to use separations by pages.
 Each page is made by a dictionary containing components and redux. 
